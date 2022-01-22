@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Admin portal</title>
-	<style>
-		h2{
-			color:chocolate;
-			
-		}
-		.background {
-			background-image:url("img.png");
-			height: 60px;
-			background-position:top;
-			padding:7px;
-		
-		}
-		a{
-			color
-		}
-		nav{
-			background-color:lightcoral;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>ADD BOOKS FORM</title>
 </head>
 <body>
-	<div class="background">
-		<h2 align="center">ADMIN PORTAL</h2>
-	</div>
+    <b>
+    <h2 align="center">ADD A BOOK</h2>
+    <form action="adminindex.html" align="left" method="post" class="exit" >
+    <b><button input type="submit" value="Exit" class="exitbtn">Exit</button></b>
+      </form>
+      <br>
+    <form action="insertbooks.php" id="submit" method="post" align="center" class="formhai">
+        <p>BOOK TITLE:<input type="text" name="BOOKTITLE"></p>
+        <p>AUTHOR:<input type="text" name="author_name"></p>
+        <p>PUBLISHER:<input type="text" name="publisher_name"></p>
+        <p>GENRE:
+            <select name="genre">
+                <option value="fiction">Fiction</option>
+                <option value="non fiction">Non fiction</option>
+                <option value="drama">Drama</option>
+                <option value="poetry">Poetry</option>
+                <option value="folktale">Folktale</option>
 
+            </select>
+        </p>
+        <legend>DESCRIPTION
+        <p><input textarea cols="40" rows="5" name="description"></p></legend>
+        <p>UPLOAD FILE:&nbsp;&nbsp;&nbsp;&nbsp;<input type="file"></p>
+        <p><input type="submit" value="ADD"></p>
 
-	<nav>
-		<a href="addbooks.html" target="blank">ADD BOOK</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="#">ADD ARTICLE</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="#">ADD PODCAST</a>
-	</nav>
-	
-	</body>
+    </form>
+</b>
+<script>
+  document.getElementById("submit").addEventListener('submit',function(event){
+    alert("Dear Admin, your book has been inserted.");
+   event.preventDefault();
+  });
+</script>
+</body>
+
 </html>
